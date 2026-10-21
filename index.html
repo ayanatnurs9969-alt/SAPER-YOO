@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сапер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Сапер</h1>
+        
+        <div class="difficulty-selector">
+            <button class="difficulty-btn active" data-difficulty="easy">Легко</button>
+            <button class="difficulty-btn" data-difficulty="medium">Средне</button>
+            <button class="difficulty-btn" data-difficulty="hard">Сложно</button>
+        </div>
+
+        <div class="game-info">
+            <div class="info-box">
+                <span class="label">Мины:</span>
+                <span class="value" id="mineCount">10</span>
+            </div>
+        </div>
+
+        <div class="board" id="board"></div>
+
+        <button class="restart-btn" id="restartBtn">Новая игра</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

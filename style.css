@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2rem;
+}
+
+.difficulty-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.difficulty-btn {
+    padding: 10px 25px;
+    border: 2px solid #2a5298;
+    background: white;
+    color: #2a5298;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.difficulty-btn:hover {
+    background: #2a5298;
+    color: white;
+}
+
+.difficulty-btn.active {
+    background: #2a5298;
+    color: white;
+}
+
+.game-info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-box .label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.info-box .value {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.board {
+    display: grid;
+    gap: 2px;
+    background: #999;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0 auto 25px;
+    max-width: fit-content;
+}
+
+.cell {
+    width: 35px;
+    height: 35px;
+    background: #c0c0c0;
+    border: 2px outset #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cell:hover:not(.revealed) {
+    background: #d0d0d0;
+}
+
+.cell.revealed {
+    background: #e0e0e0;
+    border: 1px solid #999;
+}
+
+.cell.mine {
+    background: #ff4757;
+}
+
+.cell.flagged {
+    background: #ffd700;
+}
+
+.cell[data-num="1"] { color: #0000ff; }
+.cell[data-num="2"] { color: #008000; }
+.cell[data-num="3"] { color: #ff0000; }
+.cell[data-num="4"] { color: #000080; }
+.cell[data-num="5"] { color: #800000; }
+.cell[data-num="6"] { color: #008080; }
+.cell[data-num="7"] { color: #000000; }
+.cell[data-num="8"] { color: #808080; }
+
+.restart-btn {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.restart-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(30, 60, 114, 0.4);
+}
+
+.restart-btn:active {
+    transform: translateY(0);
+}
